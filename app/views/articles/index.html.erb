@@ -1,0 +1,10 @@
+<ul class="list-group">
+  <% @articles.each do |article| %>
+    <li class="list-group-item">
+      <h4><%= link_to article.title, article_path(article) %> </h4>
+      <p> <%= article.content %></p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add article", new_article_path %>
